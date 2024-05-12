@@ -1,0 +1,40 @@
+.tokenContainer {
+    text-align: center;
+  }
+  
+.heading {
+margin-top: 20px;
+color: #333;
+}
+
+.tokenList {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+
+.token {
+width: 100px;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px;
+font-size: 20px;
+font-weight: bold;
+
+}
+
+.notcompleted {
+background-color: #0aaeb9; 
+}
+
+.live {
+background-color: #add8e6; 
+}
+
+.completed {
+background-color: rgb(217,217,217);
+}
