@@ -1,0 +1,67 @@
+.container {
+    text-align: center;
+  }
+  
+  .backButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0AAEB9;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-weight: normal;
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin-top: 10px;
+    text-decoration: none;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .backButton:hover{
+    background-color: rgb(0, 135,145);
+
+  }
+  
+  
+  .heading {
+    color: #000000;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+  }
+  
+  .table {
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: auto;
+     margin-right: auto;
+    border-collapse: collapse;
+    background-color: #EEFBFE;
+    
+  }
+  .table th{
+    padding: 10px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 36px;
+  }
+  
+  
+  
+  .table td {
+    padding: 10px;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 36px;
+  }
+  
+  .table th {
+    background-color:#EEFBFE ;
+  }
+  th, td {
+    border: 1px solid #000; /* Add borders to each cell */
+    padding: 8px; /* Add padding for better spacing */
+  }
+  
