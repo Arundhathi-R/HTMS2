@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './avslots.css';
 
-function App() {
+function Avslots() {
   const [selectedSlot, setSelectedSlot] = useState(null);
 
   const handleSlotClick = (slot) => {
@@ -31,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default Avslots;
