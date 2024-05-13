@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './avslots.css';
+import {useNavigate} from 'react-router-dom';
 
 function Avslots() {
   const [selectedSlot, setSelectedSlot] = useState(null);
@@ -7,7 +8,11 @@ function Avslots() {
   const handleSlotClick = (slot) => {
     setSelectedSlot(slot);
   };
+  const navigate = useNavigate();
 
+  const handlebooknowButtonClick = () => {
+    navigate('/confirm');
+  };
   return (
     <div className="container">
       <div className="title">Available Slots</div>
@@ -26,7 +31,7 @@ function Avslots() {
         </div>
         {/* Add similar divs for other time slots */}
       </div>
-      <div className="bookNow">Book Now</div>
+      <div className="bookNow" onClick={handlebooknowButtonClick}>Book Now</div>
     </div>
   );
 }

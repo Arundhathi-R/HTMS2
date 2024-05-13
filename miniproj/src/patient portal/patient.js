@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom';
+
 import './patient.css';
 import dr1 from './assets/dr 1 sergio.jpg';
 import dr2 from './assets/dr 2 analise k.jpeg';
@@ -7,6 +9,7 @@ import dr4 from './assets/dr 4 arya dev.jpg';
 import dr5 from './assets/dr 5 ahn jeong.jpg';
 import dr6 from './assets/dr 6 jun.jpg';
 import dr7 from './assets/dr 7 chae.jpg';
+
 
 const doctors = [
   { id: 1, name: 'Dr. Sergio Jim', department: 'Cardiology', image: dr1 },
@@ -19,6 +22,15 @@ const doctors = [
 ];
 
 const PatientPortal = () => {
+  const navigate = useNavigate();
+  
+
+  const handleApptHisButtonClick = () => {
+    navigate('/apptHistory');
+  };
+  const handlelogoutpButtonClick = () => {
+    navigate('/login');
+  };
   const [visibleDoctors, setVisibleDoctors] = useState(4);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -42,6 +54,7 @@ const PatientPortal = () => {
 
   return (
     <div className="patient-portal-container">
+      <button className="logout-p" onClick={handlelogoutpButtonClick}>Logout</button>
       <h1 className="patient-title">PATIENT</h1>
       <div className="image-upload-container">
         <label htmlFor="image-upload" className="image-upload-label">
@@ -60,7 +73,7 @@ const PatientPortal = () => {
         </label>
       </div>
       <br />
-      <button className="appointment-history-button">Appointment History</button>
+      <button className="appointment-history-button" onClick={handleApptHisButtonClick}>Appointment History</button>
       <h2 className="choose-doctor-title">Choose your doctor:</h2>
       <div className="doctor-carousel">
         {doctors.slice(0, visibleDoctors).map((doctor) => (

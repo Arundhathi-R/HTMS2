@@ -1,0 +1,83 @@
+.header {
+    background-color: #0AAEB9;
+    height: 181px;
+    margin-top: 0px;
+    padding: 10px;
+  }
+  
+  .hospital-name {
+    font-family: 'Poppins';
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  
+  .tagline {
+    font-family: 'Jomhuria';
+    font-size: 60px;
+    font-weight: 500;
+    color: #301465;
+    margin: 40px 40px;
+    text-align: right;
+  }
+  
+  .buttons {
+    text-align: right;
+  }
+  
+  .admin-button {
+    font-family: 'Josefin Sans';
+    font-size: 64px;
+    background-color: #7DE3EA;
+    padding: 10px 30px;
+    margin: 50px 40px;
+    border: none;
+    border-radius: 10px;
+    color: #301465;
+    margin-right:200px;
+    cursor: pointer;
+  }
+  .admin-button:hover{
+    background-color: rgb(10, 174,185);
+  }
+  
+  .patient-button {
+    font-family: 'Josefin Sans';
+    font-size: 64px;
+    background-color:#7DE3EA ;
+    padding: 10px 30px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    color: #301465;
+    margin-right: 200px;
+    cursor: pointer;
+  }
+  .patient-button:hover{
+    background-color: rgb(10, 174,185);
+  
+  }
+  .logo {
+    width: auto; 
+      height: 181px; 
+      border-radius: 0%; 
+      margin-right: 10px; 
+      margin-bottom: 10px;
+      float: left; 
+      margin-left: 10px;
+      margin-top: 10;
+  
+  }
+  .dr{
+    width: auto; 
+      height: 181; 
+      border-radius: 0%; 
+      margin-right: 0px; 
+      float: left; 
+      margin-left: 0px;
+      margin-top: 0;
+  
+  }

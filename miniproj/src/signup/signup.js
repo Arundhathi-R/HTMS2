@@ -1,7 +1,14 @@
 import React from 'react';
 import './signup.css'; 
+import { useNavigate } from 'react-router-dom';
+const Signup = () => {
 
-const signup = () => {
+  
+    const navigate = useNavigate();
+  
+    const handleokButtonClick = () => {
+      navigate('/login');
+    };
   return (
     <div className="signup-container">
       <form className="signup-form">
@@ -36,9 +43,9 @@ const signup = () => {
           <input type="password" id="Password" placeholder=" Enter your Password" />
         </div>
       </form>
-      <button className="ok-button">OK</button>
+      <button className="ok-button" onClick={handleokButtonClick}>OK</button>
     </div>
   );
 };
 
-export default signup;
+export default Signup;

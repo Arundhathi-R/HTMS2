@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './view.css';
 
 const Viewdetails = () => {
@@ -30,6 +31,12 @@ const Viewdetails = () => {
     setAppointments(updatedAppointments);
   };
 
+  const navigate = useNavigate();
+  
+  const handlebackButtonClick = () => {
+    navigate('/Doctor');
+  };
+
   return (
     <div className="App">
       <header>
@@ -43,12 +50,12 @@ const Viewdetails = () => {
 };
 
 const BackButton = () => {
-  const handleClick = () => {
+  const handlebackButtonClick = () => {
     console.log('Back button clicked');
   };
 
   return (
-    <button className="back-button" onClick={handleClick}>
+    <button className="back-button" onClick={handlebackButtonClick}>
       {'←back'}
     </button>
   );
