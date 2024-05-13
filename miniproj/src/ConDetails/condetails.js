@@ -1,10 +1,17 @@
 import React from 'react';
 import './condetails.css';
-
+import {useNavigate} from 'react-router-dom';
 function Condetails() {
+  const navigate = useNavigate();
+
+  const handlebackButtonClick = () => {
+    navigate('/appntbook');
+  };
   return (
     <div className="container">
       <div className="hospital-info">
+      <button className="backButton" onClick={handlebackButtonClick}> Back</button>
+
         <h1 style={{ color: 'black' }}>Harmony Health Hospital</h1>
         <p style={{ color: 'black' }}>Address: Harmony Health Hospital<br />
           XYZ Street, 696201<br />

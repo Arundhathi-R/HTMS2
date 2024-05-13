@@ -1,9 +1,17 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import './confirm.css'; // Import CSS file for styling
 
 const ConfirmationPage = () => {
+  const navigate = useNavigate();
+
+  const handlebackButtonClick = () => {
+    navigate('/avslots');
+  };
   return (
     <div className="confirmation-page-container">
+     <button className="backButton" onClick={handlebackButtonClick}> Back</button>
+
       <h1 className="page-title">APPOINTMENT DETAILS</h1>
       <div className="appointment-details">
         <p><span className="detail-label">Name of doctor:</span> Dr. Analise K</p>

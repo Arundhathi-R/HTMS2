@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './editslot.css'; // Import CSS file for styling
 
 const DoctorSlotEditor = () => {
@@ -27,9 +28,15 @@ const DoctorSlotEditor = () => {
 
   const isAddSlotSelected = (slot) => selectedAddSlots.includes(slot);
   const isDeleteSlotSelected = (slot) => selectedDeleteSlots.includes(slot);
+  const navigate = useNavigate();
 
+  const handlebackButtonClick = () => {
+    navigate('/Doctor');
+  };
   return (
     <div className="doctor-slot-editor-container">
+    <button className="backButton" onClick={handlebackButtonClick}>Back</button>
+
       <h2 className="section-title">ADD SLOTS</h2>
       <div className="add-slots-section">
         <div className="slot-list">
