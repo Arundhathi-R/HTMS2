@@ -1,6 +1,9 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import './login.css';
+import { auth } from "../config/firebase";
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import {useState} from "react";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -8,8 +11,16 @@ const Login = () => {
   const handlesignupButtonClick = () => {
     navigate('/signup');
   };
-   const handlesigninButtonClick = () => {
-       navigate('/patient');
+  const[email,setEmail] = useState("")
+  const[password,setPassword] = useState("")
+  console.log(auth?.currentUser?.email)
+
+   const handlesigninButtonClick = async () => {
+    try{await createUserWithEmailAndPassword(auth, email, password)
+       navigate('/patient'); } catch(err){
+        console.error(err);
+       }
+       
      };
      const handleForgotPasswordClick = () => {
       navigate('/forgotpassword');
@@ -23,11 +34,11 @@ const Login = () => {
         <h2>Login</h2>
         <div className="input-container">
           <label >Username</label>
-          <input type="text" placeholder="@gmail.com"/>
+          <input type="text" placeholder="@gmail.com" onChange={(e) => setEmail(e.target.value)}/>
         </div>
         <div className="input-container">
           <label>Password</label>
-          <input type="password" />
+          <input type="password" onChange={(e) => setPassword(e.target.value)}/>
         </div>
         <div className="forgot-password">
           <a href="/forgotpassword" onClick={handleForgotPasswordClick}>Forgot password?</a>

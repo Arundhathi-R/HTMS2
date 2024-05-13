@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import {useNavigate} from 'react-router-dom';
-
 import './patient.css';
+/*2*/import {useNavigate} from 'react-router-dom';
+import { auth } from "../config/firebase";
+import { signOut } from 'firebase/auth';
+
 import dr1 from './assets/dr 1 sergio.jpg';
 import dr2 from './assets/dr 2 analise k.jpeg';
 import dr3 from './assets/dr 3 joy tuck.jpg';
@@ -28,7 +30,8 @@ const PatientPortal = () => {
   const handleApptHisButtonClick = () => {
     navigate('/apptHistory');
   };
-  const handlelogoutpButtonClick = () => {
+  const handlelogoutpButtonClick = async () => {
+    await signOut(auth)
     navigate('/login');
   };
   const [visibleDoctors, setVisibleDoctors] = useState(4);

@@ -26,7 +26,7 @@ function Doctor() {
     navigate('/view');
   };
   const handlelogoutdButtonClick = () => {
-    navigate('/login');
+    navigate('/logindoctor');
   };
 
 
