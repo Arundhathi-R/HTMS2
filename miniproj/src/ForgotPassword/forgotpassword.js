@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ForgotPassword.css';
 
-function App() {
+function Forgotpassword() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [showPopup, setShowPopup] = useState(false);
@@ -49,4 +49,4 @@ function App() {
     );
 }
 
-export default App;
+export default Forgotpassword;
