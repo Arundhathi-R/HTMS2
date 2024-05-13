@@ -1,9 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 import cross from './assets/hospital cross.png';
 import doctor from './assets/dr homepage.jpeg'
 
 function BlankWhitePage() {
+    const navigate = useNavigate();
+
+    const handlepatientButtonClick = () => {
+      navigate('/login');
+    };
+    const handleAdminButtonClick = () => {
+        navigate('/login');
+      };
   return (
     <div>
       <div className="header">
@@ -14,10 +23,10 @@ function BlankWhitePage() {
       <div className="tagline">Nurturing Health, Restoring Lives</div>
       <div className="buttons">
         <div>
-          <button className="admin-button">Admin</button>
+          <button className="admin-button"onClick={handleAdminButtonClick}>Admin</button>
         </div>
         <div>
-          <button className="patient-button">Patient</button>
+          <button className="patient-button"onClick={handlepatientButtonClick}>Patient</button>
         </div>
       </div>
     </div>
