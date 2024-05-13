@@ -1,7 +1,7 @@
 import React from 'react';
 import './condetails.css';
 
-function App() {
+function Condetails() {
   return (
     <div className="container">
       <div className="hospital-info">
@@ -20,4 +20,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default Condetails;
