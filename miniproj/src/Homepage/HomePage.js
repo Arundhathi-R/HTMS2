@@ -11,7 +11,7 @@ function BlankWhitePage() {
       navigate('/login');
     };
     const handleAdminButtonClick = () => {
-        navigate('/login');
+        navigate('/logindoctor');
       };
   return (
     <div>

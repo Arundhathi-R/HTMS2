@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './ForgotPassword.css';
+import './forgotpassword.css';
+import { useNavigate } from 'react-router-dom';
 
 function Forgotpassword() {
     const [password, setPassword] = useState('');
@@ -9,10 +10,17 @@ function Forgotpassword() {
     function handleReset() {
         setShowPopup(true);
     }
-
+    const navigate = useNavigate();
+  
+    const handlebackButtonClick = () => {
+        navigate('/login');
+      };
+      const handleokButtonClick = () => {
+        navigate('/login');
+      };
     return (
         <div className="container">
-            <button className="backButton">← Back</button>
+            <button className="backButton" onClick={handlebackButtonClick}>← Back</button>
             <h2 className="heading">Create new password</h2>
             <p className="description">Your new password must be different from the previous password.</p>
             <div className="form-group">
@@ -42,7 +50,7 @@ function Forgotpassword() {
             {showPopup && (
                 <div className="popup" style={{ backgroundColor: 'rgb(217, 217, 217)' }}>
                     <p>Confirmation for resetting your password has been sent to your email.</p>
-                    <button className="okButton" onClick={() => setShowPopup(false)}>OK</button>
+                    <button className="okButton" onClick={() => setShowPopup(false)}  onClick={handleokButtonClick}>OK</button>
                 </div>
             )}
         </div>

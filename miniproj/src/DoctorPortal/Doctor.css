@@ -95,7 +95,20 @@
     border-radius: 10px;
   }
 
-  
+  .logout-d{
+    background-color: rgb(10, 174, 185);
+    color: white;
+    /*height: 50px;
+    width: 300px;*/
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
   .doctor-image {
     
       width: 70px; /* Adjust width as needed */

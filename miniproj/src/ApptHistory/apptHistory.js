@@ -1,12 +1,18 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
 //import { Link } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import './apptHistory.css';
 
 function AppointmentHistory() {
+  const navigate = useNavigate();
+
+  const handlebackButtonClick = () => {
+    navigate('/patient');
+  };
   return (
     <div className="container">
-        <button className="backButton">{" Back"}</button>
+        <button className="backButton" onClick={handlebackButtonClick}> Back</button>
           <h1 className="heading">APPOINTMENT HISTORY:</h1>
       <table className="table">
         <thead>

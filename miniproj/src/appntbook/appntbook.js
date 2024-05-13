@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
+import {useNavigate} from 'react-router-dom';
 import './appntbook.css';
 
 function Appntbook() {
+  const navigate = useNavigate();
+
+  const handlecontactButtonClick = () => {
+    navigate('/condetails');
+  };
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   
@@ -27,7 +33,7 @@ function Appntbook() {
           />
         </div>
     
-        <button className="contact-button">Contact Us</button>
+        <button className="contact-button" onClick={handlecontactButtonClick}>Contact Us</button>
       </div>
     </div>
   );

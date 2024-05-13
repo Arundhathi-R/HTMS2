@@ -1,8 +1,16 @@
 import React from 'react';
 import './drdetails.css';
 import doctorImage from './assets/dr 2 analise k.jpeg';
-
+import { useNavigate } from 'react-router-dom';
 function Drdetails() {
+  const navigate = useNavigate();
+  
+    const handlebookingButtonClick = () => {
+      navigate('/appntbook');
+    };
+    const handletokenButtonClick = () => {
+      navigate('/livetoken');
+    };
   return (
     <div className="detailsContainer">
       <h2>DOCTOR DETAILS</h2>
@@ -27,10 +35,10 @@ function Drdetails() {
       </div>
       
       <div className="buttonRow">
-        <button className="bookAppointmentButton" style={{ backgroundColor: 'rgb(10, 174, 185)' }}>Book an Appointment</button>
+        <button className="bookAppointmentButton"    onClick={handlebookingButtonClick}style={{ backgroundColor: 'rgb(10, 174, 185)' }}>Book an Appointment</button>
       </div>
       <div className="buttonRow">
-        <button className="tokenStatusButton" style={{ backgroundColor: 'rgb(10, 174, 185)' }}>Token Status</button>
+        <button className="tokenStatusButton" onClick={handletokenButtonClick}style={{ backgroundColor: 'rgb(10, 174, 185)' }}>Token Status</button>
       </div>
     </div>
   );

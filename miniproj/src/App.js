@@ -13,6 +13,12 @@ import Signup from './signup/signup';
 import LiveTokenDisplay from './livetoken/livetoken';
 import Viewdetails from './viewappointment/view';
 import Appntbook from './appntbook/appntbook';
+import Forgotpassword from './ForgotPassword/forgotpassword';
+import  Drdetails from './DrDetails/drdetails';
+import Condetails from './ConDetails/condetails';
+import  Avslots from './AvSlots/avslots';
+import Logind from './logindoctor/logindoctor'
+
 
 
 // Define the App component
@@ -22,17 +28,24 @@ function App() {
       <Routes>
 
         <Route exact path="/" element={<BlankWhitepage/>} />
-        <Route path="/ApptHistory/apptHistory" element={<AppointmentHistory/>} />
-        <Route path="/DoctorPortal/Doctor" element={<Doctor/>} />
+        <Route path="/apptHistory" element={<AppointmentHistory/>} />
+        <Route path="/Doctor" element={<Doctor/>} />
 
-        <Route exact path="/login" element={<Login />} />
-        <Route path="/patient portal/patient" element={<PatientPortal />} />
-        <Route path="/appmnt confirm/confirm" element={<ConfirmationPage />} />
-        <Route path="/edit slots/editslot" element={<DoctorSlotEditor />} />
-        <Route exact path="/signup" element={<Signup/>} />
-        <Route path="/appntbook/appntbook" element={<Appntbook/>} />
-        <Route path="/livetoken/livetoken" element={<LiveTokenDisplay/>}/>
-        <Route path="/viewappointment/view" element={<Viewdetails/>}/>
+        <Route  path="/login" element={<Login />} />
+        <Route path="/patient" element={<PatientPortal />} />
+        <Route path="/confirm" element={<ConfirmationPage />} />
+        <Route path="/editslot" element={<DoctorSlotEditor />} />
+        <Route  path="/signup" element={<Signup/>} />
+        <Route path="/appntbook" element={<Appntbook/>} />
+        <Route path="/livetoken" element={<LiveTokenDisplay/>}/>
+        <Route path="/view" element={<Viewdetails/>}/>
+       
+        <Route path="/doctor/:id" element={<Drdetails />} />
+        <Route  path="/forgotpassword" element={<Forgotpassword/>} />
+        <Route path="/DrDetails/drdetails" element={< Drdetails />} />
+        <Route path="/condetails" element={< Condetails/>} />
+        <Route path="/AvSlots/avslots" element={< Avslots />} />
+        <Route path="/logindoctor" element={< Logind/>} />
 
       </Routes>
     </Router>

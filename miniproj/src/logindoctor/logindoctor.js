@@ -1,20 +1,17 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-import './login.css';
+import './logindoctor.css';
 
-const Login = () => {
+const Logind = () => {
   const navigate = useNavigate();
 
-  const handlesignupButtonClick = () => {
-    navigate('/signup');
-  };
+  //const handlesignupButtonClick = () => {
+   // navigate('/signup');
+  //};
    const handlesigninButtonClick = () => {
-       navigate('/patient');
+       navigate('/Doctor');
      };
-     const handleForgotPasswordClick = () => {
-      navigate('/forgotpassword');
-    };
-  
+
     
   
   return (
@@ -30,15 +27,15 @@ const Login = () => {
           <input type="password" />
         </div>
         <div className="forgot-password">
-          <a href="/forgotpassword" onClick={handleForgotPasswordClick}>Forgot password?</a>
+          <a href="/forgotpassword">Forgot password?</a>
         </div>
         <div className="button-container">
           <button onClick={handlesigninButtonClick}>Sign In</button>
-           <button onClick={handlesignupButtonClick}>Sign Up</button>
+           
         </div>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Logind;
