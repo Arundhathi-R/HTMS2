@@ -9,8 +9,13 @@ const Signup = () => {
     const handleokButtonClick = () => {
       navigate('/login');
     };
+    const handlebackButtonClick = () => {
+      navigate('/login');
+    };
   return (
     <div className="signup-container">
+      <button className="backButton" onClick={handlebackButtonClick}>Back</button>
+
       <form className="signup-form">
         <div className="input-container">
           <label htmlfor="Name">Name:</label>

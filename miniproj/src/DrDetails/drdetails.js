@@ -11,8 +11,13 @@ function Drdetails() {
     const handletokenButtonClick = () => {
       navigate('/livetoken');
     };
+    const handleBackButtonClick = () => {
+      navigate('/patient');
+    };
   return (
     <div className="detailsContainer">
+      <button className="backButton" onClick={handleBackButtonClick}>Back</button>
+      
       <h2>DOCTOR DETAILS</h2>
       <div className="imageContainer">
         <img src={doctorImage} alt=" " className="doctorImage" />

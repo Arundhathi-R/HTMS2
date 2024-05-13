@@ -40,7 +40,8 @@ const Viewdetails = () => {
   return (
     <div className="App">
       <header>
-        <BackButton />
+          <button className="backButton" onClick={handlebackButtonClick}>Back</button>
+
         <h1>APPOINTMENT DETAILS</h1>
         <DateDisplay selectedDate={selectedDate} />
       </header>

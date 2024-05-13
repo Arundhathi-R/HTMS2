@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './live.css';
 
 const LiveTokenDisplay = () => {
+  const navigate = useNavigate();
+  
+  const handlebackButtonClick = () => {
+    navigate('/drdetails');
+  };
   const [tokens, setTokens] = useState([]);
 
   useEffect(() => {
@@ -34,6 +41,8 @@ const LiveTokenDisplay = () => {
 
   return (
     <div className="tokenContainer">
+            <button className="backButton" onClick={handlebackButtonClick}>Back</button>
+
       <h1 className="heading">Live Token Status</h1>
 
       <div className="tokenList">
