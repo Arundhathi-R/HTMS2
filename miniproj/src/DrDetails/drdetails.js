@@ -2,7 +2,7 @@ import React from 'react';
 import './drdetails.css';
 import doctorImage from './assets/dr 2 analise k.jpeg';
 
-function App() {
+function Drdetails() {
   return (
     <div className="detailsContainer">
       <h2>DOCTOR DETAILS</h2>
@@ -36,4 +36,4 @@ function App() {
   );
 }
 
-export default App;
+export default Drdetails;
