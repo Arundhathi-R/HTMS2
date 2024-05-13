@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(rgb(216, 247, 254), white); 
+    padding: 20px;
+  }
+  
+  .title {
+    color: black; 
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 100px;
+    /* margin-bottom: 20px; */
+  }
+  
+  .timeSlotsWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 50px;
+    margin: auto;
+  
+  }
+  
+  .timeSlot {
+      font-family: 'Poppins', sans-serif;
+      font-size: 25px;
+      color: black;
+      padding: 40px;
+      margin-right: 50px;
+      background-color: #96E0EE;
+      border-radius: 80%;
+      font-weight: bold;
+    }
+  
+  .selected {
+    background-color: rgb(10, 174, 185);
+  }
+  
+  .bookNow {
+    width: 120px;
+    height: 40px;
+    background-color: rgb(10, 174, 185); 
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px; 
+   }
