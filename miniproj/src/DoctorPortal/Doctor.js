@@ -31,23 +31,23 @@ function Doctor() {
 
 
   return (
-    <div className="container">
+    <div className="container1">
        <div className="title-container">
-              <img src={doctorImage} alt="Doctor" className="doctor-image" />
-      <h1 className="title">WELCOME BACK, DR. ARYA DEV!</h1>
+              <img src={doctorImage} alt="Doctor" className="doctor-image1" />
+      <h1 className="title1">WELCOME BACK, DR. ARYA DEV!</h1>
       <button className="logout-d"onClick={handlelogoutdButtonClick}>Logout</button>
       </div>
-      <div className="calendar-container">
+      <div className="calendar-container1">
         <Calendar
           onChange={setDate}
           value={date}
-        className="custom-Calendar"
+        className="custom-Calendar1"
         />
       </div>
-      <button className="date-button">{date.toLocaleDateString()}</button>
-      <div className="button-container">
-        <button className="action-button"onClick={handleviewButtonClick}>View Appointment</button>
-        <button className="action-button" onClick={handleeditslotButtonClick}>Edit Slots</button>
+      <button className="date-button1">{date.toLocaleDateString()}</button>
+      <div className="button-container1">
+        <button className="action-button1"onClick={handleviewButtonClick}>View Appointment</button>
+        <button className="action-button1" onClick={handleeditslotButtonClick}>Edit Slots</button>
       </div>
     </div>
   );
