@@ -18,7 +18,7 @@ const Signup = () => {
         const email = document.getElementById('Username').value;
 
         try {
-            // Create user in Firebase Authentication
+            // register new patients
             await createUserWithEmailAndPassword(auth, email, password);
             const docRef1 = await addDoc(collection(db, "Patients"), {
               Address: address,
@@ -28,12 +28,10 @@ const Signup = () => {
               Phone: phone,
             });
             console.log("Document written with ID: ", docRef1.id);
-
-            // After successful signup and adding patient details, navigate to login page
             navigate('/login');
         } catch (error) {
             console.error('Error signing up:', error.message);
-            // Handle error, show message to user, etc.
+            // error handling
         }
     };
 
