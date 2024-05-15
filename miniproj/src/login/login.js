@@ -67,25 +67,44 @@ const Login = () => {
      const handleForgotPasswordClick = () => {
       navigate('/forgotpassword');
     };
+<<<<<<< HEAD
   
     
   
+=======
+
+    const handlesigninButtonClick = async () => {
+        try {
+            // patient sign in with Firebase Authentication
+            await signInWithEmailAndPassword(auth, email, password);
+            navigate('/patient');
+        } catch (error) {
+            console.error('Error signing in:', error.message);
+            // error handling
+        }
+    };
+
+    const handleForgotPasswordClick = () => {
+        navigate('/forgotpassword');
+    };
+
+>>>>>>> e25087edef4b55012ff604f0d287a97aca49f250
     return (
-      <div className="login-container">
-        <div className="login-form">
+      <div className="login-container7">
+        <div className="login-form7">
           <h2>Login</h2>
-          <div className="input-container">
+          <div className="input-container7">
             <label >Username</label>
             <input type="text" placeholder="@gmail.com" onChange={(e) => setEmail(e.target.value)}/>
           </div>
-          <div className="input-container">
+          <div className="input-container7">
             <label>Password</label>
             <input type="password" onChange={(e) => setPassword(e.target.value)}/>
           </div>
-          <div className="forgot-password">
+          <div className="forgot-password7">
             <a href="/forgotpassword" onClick={handleForgotPasswordClick}>Forgot password?</a>
           </div>
-          <div className="button-container">
+          <div className="button-container7">
             <button onClick={handlesigninButtonClick}>Sign In</button>
              <button onClick={handlesignupButtonClick}>Sign Up</button>
              </div>

@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 function Doctor() {
   const [date, setDate] = useState(new Date());
 
-  // Function to format date as "MM/DD/YYYY"
+  //dd-mm-yyyy
   const formatDate = (date) => {
     const day = date.getDate();
     const month = date.getMonth() + 1;

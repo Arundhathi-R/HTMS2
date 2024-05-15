@@ -1,4 +1,4 @@
-.appointment-booking-container {
+.appointment-booking-container3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,33 +6,33 @@
     background: linear-gradient(to top lef,rgb(216,247,254),rgb(255,255,255)); 
   }
   
-  .appointment-booking {
+  .appointment-booking3 {
     text-align: center;
     padding: 10px;
     background-color: rgba(255, 255, 255); 
     border-radius: 10px;
   }
   
-  .title {
+  .title3 {
     font-size: 40px;
     font-weight: bold;
     align-items: top center;
   
   }
   
-  .comment {
+  .comment3 {
     font-size: 20px;
     margin-bottom: 50px;
   }
   
-  .calendar {
+  .calendar3 {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
     
   }
   
-  .calendar-day {
+  .calendar-day3 {
     width: 100px;
     height: 100px;
     border: 20px solid #ccc;
@@ -45,7 +45,7 @@
 
   }
   
-  .contact-button {
+  .contact-button3 {
     background-color: #00aeb9;
     color: white;
     padding: 10px 20px;
@@ -57,7 +57,7 @@
     text-align: center;
     margin: 0 auto;
   }
-  .custom-calendar {
+  .custom-calendar3 {
     width: 1000px; 
     max-width: 1000%; 
     font-size: 20px; 
@@ -73,7 +73,7 @@
   .react-calendar__navigation__label__labelText {
     font-size: 22px; 
   }
-  .contact-button:hover {
+  .contact-button3:hover {
     background-color:#00aeb9;
   }
   

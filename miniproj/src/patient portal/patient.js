@@ -46,7 +46,6 @@ const PatientPortal = () => {
   };
 
   const handleDoctorClick = (doctor) => {
-    // Open a new window with doctor details
     window.open(`/doctor/Doc${doctor.id}`, '_blank');
   };
 

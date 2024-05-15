@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './editslot.css'; // Import CSS file for styling
+import './editslot.css';
 
 const DoctorSlotEditor = () => {
   const [selectedAddSlots, setSelectedAddSlots] = useState([]);
@@ -71,7 +71,7 @@ const DoctorSlotEditor = () => {
             >
               16:30 - T13
             </div>
-            {/*We can dd other slots similarly*/}
+            {/*We can dd other slots similarly (superadmin)*/}
           </div>
           <div className="arrow-container">
             <button className="scroll-button">&#8249;</button>
@@ -114,7 +114,7 @@ const DoctorSlotEditor = () => {
             >
               15:15 - T12
             </div>
-            {/* Add other slots similarly */}
+            {/* WE can add other slots similarly */}
           </div>
           <div className="arrow-container">
             <button className="scroll-button">&#8249;</button>

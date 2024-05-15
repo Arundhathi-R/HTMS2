@@ -12,7 +12,6 @@ function Avslots() {
 
   useEffect(() => {
     if (!selectedDate) {
-      // If no date is provided in the URL, navigate back to appointment booking
       navigate('/appntbook');
     }
   }, [navigate, selectedDate]);
@@ -29,7 +28,6 @@ function Avslots() {
     <div className="container">
       <div className="title">Available Slots</div>
       <div className="timeSlotsWrapper">
-        {/* Your time slot rendering logic */}
         <div className={`timeSlot ${selectedSlot === '10:00' ? 'selected' : ''}`} onClick={() => handleSlotClick('10:00')}>
           <div className="time">10:00 T1</div>
         </div>
@@ -52,7 +50,7 @@ function Avslots() {
         >
           <div className="time">15:30 T11</div>
         </div>
-        {/* Add similar divs for other time slots */}
+        {/* to add similar divs for other time slots - will later integrate with database*/}
       </div>
       <div className="bookNow" onClick={handlebooknowButtonClick}>Book Now</div>
     </div>
