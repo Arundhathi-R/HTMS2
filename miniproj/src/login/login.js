@@ -39,7 +39,7 @@ const Login = () => {
           </div>
           <div className="input-container7">
             <label>Password</label>
-            <input type="password7" value={password} onChange={(e) => setPassword(e.target.value)}/>
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
           </div>
           <div className="forgot-password7">
             <a href="/forgotpassword" onClick={handleForgotPasswordClick}>Forgot password?</a>
