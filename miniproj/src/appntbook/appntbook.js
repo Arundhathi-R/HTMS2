@@ -13,7 +13,7 @@ function Appntbook() {
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
-    navigate(`/avslots?date=${date.toISOString()}`); // Pass selected date as URL parameter
+    navigate(`/avslots?date=${date.toISOString()}`);
   };
   const handlebackButtonClick = () => {
     navigate('/drdetails');

@@ -16,12 +16,12 @@ const Login = () => {
 
     const handlesigninButtonClick = async () => {
         try {
-            // Sign in user with Firebase Authentication
+            // patient sign in with Firebase Authentication
             await signInWithEmailAndPassword(auth, email, password);
             navigate('/patient');
         } catch (error) {
             console.error('Error signing in:', error.message);
-            // Handle error, show message to user, etc.
+            // error handling
         }
     };
 

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import firebase from 'firebase/compat/app'; // for version 9 modular SDK
-import 'firebase/compat/firestore'; // for version 9 modular SDK
+import firebase from 'firebase/compat/app'; 
+import 'firebase/compat/firestore';
 
 import { useNavigate } from 'react-router-dom';
-import { db } from '../config/firebase'; // Assuming this is the correct path to your firebase.js file
+import { db } from '../config/firebase';
 
 import './logindoctor.css';
 import { collection,query,where,getDocs } from 'firebase/firestore';
