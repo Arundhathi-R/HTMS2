@@ -20,21 +20,21 @@ function Appntbook() {
   };
 
   return (
-    <div className="appointment-booking-container">
-      <div className="appointment-booking">
-      <button className="backButton" onClick={handlebackButtonClick}>Back</button>
-        <h1 className="title">Appointment Booking</h1>
-        <p className="comment">Select an appointment date:</p>
+    <div className="appointment-booking-container3">
+      <div className="appointment-booking3">
+      <button className="backButton3" onClick={handlebackButtonClick}>Back</button>
+        <h1 className="title3">Appointment Booking</h1>
+        <p className="comment3">Select an appointment date:</p>
         
-        <div className="calendar">
+        <div className="calendar3">
           <Calendar
             onChange={handleDateChange}
             value={selectedDate}
-            className="custom-calendar"
+            className="custom-calendar3"
           />
         </div>
     
-        <button className="contact-button" onClick={handlecontactButtonClick}>Contact Us</button>
+        <button className="contact-button3" onClick={handlecontactButtonClick}>Contact Us</button>
       </div>
     </div>
   );

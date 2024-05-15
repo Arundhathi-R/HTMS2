@@ -30,21 +30,21 @@ const Login = () => {
     };
 
     return (
-      <div className="login-container">
-        <div className="login-form">
+      <div className="login-container7">
+        <div className="login-form7">
           <h2>Login</h2>
-          <div className="input-container">
+          <div className="input-container7">
             <label >Username</label>
             <input type="email" placeholder="@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
           </div>
-          <div className="input-container">
+          <div className="input-container7">
             <label>Password</label>
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+            <input type="password7" value={password} onChange={(e) => setPassword(e.target.value)}/>
           </div>
-          <div className="forgot-password">
+          <div className="forgot-password7">
             <a href="/forgotpassword" onClick={handleForgotPasswordClick}>Forgot password?</a>
           </div>
-          <div className="button-container">
+          <div className="button-container7">
             <button onClick={handlesigninButtonClick}>Sign In</button>
              <button onClick={handlesignupButtonClick}>Sign Up</button>
           </div>
