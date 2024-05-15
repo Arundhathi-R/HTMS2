@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-import './confirm.css';
+import './confirm.css'; // Import CSS file for styling
 
 const ConfirmationPage = () => {
   const navigate = useNavigate();
@@ -30,4 +30,4 @@ const ConfirmationPage = () => {
   );
 }
 
-export default ConfirmationPage
+export default ConfirmationPage;
