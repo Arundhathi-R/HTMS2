@@ -55,8 +55,8 @@ const Login = () => {
 export default Login;*/
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth } from "../config/firebase";
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+//import { auth } from "../config/firebase";
+//import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import './login.css';
 
 const Login = () => {
