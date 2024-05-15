@@ -1,4 +1,4 @@
-.login-container {
+.login-container7 {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -7,7 +7,7 @@
     background: linear-gradient(to top left, rgb(216,247,254), rgb(255,255,255));
   }
   
-  .login-form {
+  .login-form7 {
     background: transparent;
     padding: 20px;
     border-radius: 8px;
@@ -18,7 +18,7 @@
     font-size: 50px;
   }
   
-  .input-container {
+  .input-container7 {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
@@ -40,7 +40,7 @@
     background-color: rgb(217,217,217);
   }
   
-  .forgot-password {
+  .forgot-password7 {
     margin-bottom: 20px;
   }
   
@@ -51,7 +51,7 @@
     font-size: large;
   }
   
-  .button-container {
+  .button-container7 {
     display: flex;
     justify-content: space-between;
   }

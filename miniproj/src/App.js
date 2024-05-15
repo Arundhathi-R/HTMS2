@@ -42,9 +42,9 @@ function App() {
        
         <Route path="/doctor/:id" element={<Drdetails />} />
         <Route  path="/forgotpassword" element={<Forgotpassword/>} />
-        <Route path="/DrDetails/drdetails" element={< Drdetails />} />
+        <Route path="/drdetails" element={< Drdetails />} />
         <Route path="/condetails" element={< Condetails/>} />
-        <Route path="/AvSlots/avslots" element={< Avslots />} />
+        <Route path="/avslots" element={< Avslots />} />
         <Route path="/logindoctor" element={< Logind/>} />
 
       </Routes>
