@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './patient.css';
-/*2*/import {useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import { auth } from "../config/firebase";
 import { signOut } from 'firebase/auth';
 
