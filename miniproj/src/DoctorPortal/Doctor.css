@@ -1,11 +1,11 @@
-.container {
+.container1 {
     background: linear-gradient(to top left, rgb(216,247,254), rgb(255,255,255));
     min-height: 100vh;
     text-align: center;
     padding: 20px;
   }
   
-  .title {
+  .title1 {
     color: #000000;
     font-family: Poppins;
     font-weight: bold;
@@ -14,7 +14,7 @@
     margin-top:50px;
   }
   
-  .calendar-container {
+  .calendar-container1 {
    
     margin-bottom: 10px;
     justify-content: center;
@@ -63,7 +63,7 @@
     font-size: 22px;
   }
 
-  .button-container {
+  .button-container1 {
     margin-top: 50px;
     display: flex;
   justify-content: space-between; 
@@ -73,7 +73,7 @@
   
   }
   
-  .action-button {
+  .action-button1 {
     background-color: #0AAEB9;
     color: #FFFFFF;
     padding: 10px 20px;
@@ -82,15 +82,15 @@
     border:none;
     border-radius: 10px;
   }
-  .action-button:hover{
+  .action-button1:hover{
     background-color: rgb(0, 135,145);
 
   }
   
-  .action-button:last-child {
+  .action-button1:last-child {
     margin-right: 0;
   }
-  .date-button{
+  .date-button1{
     background-color: #0AAEB9;
     color: #FFFFFF;
     padding: 10px 20px;
@@ -115,7 +115,7 @@
     cursor: pointer;
   }
 
-  .doctor-image {
+  .doctor-image1 {
     
       width: 70px; /* Adjust width as needed */
       height: 70px; /* Adjust height to match width for a round shape */

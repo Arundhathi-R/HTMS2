@@ -31,26 +31,26 @@ function Avslots() {
       <div className="timeSlotsWrapper">
         {/* Your time slot rendering logic */}
         <div className={`timeSlot ${selectedSlot === '10:00' ? 'selected' : ''}`} onClick={() => handleSlotClick('10:00')}>
-          <div className="time">10:00</div>
+          <div className="time">10:00 T1</div>
         </div>
         <div className={`timeSlot ${selectedSlot === '10:30' ? 'selected' : ''}`} onClick={() => handleSlotClick('10:30')}>
-          <div className="time">10:30</div>
+          <div className="time">10:30 T3</div>
         </div>
         <div className={`timeSlot ${selectedSlot === '12:30' ? 'selected' : ''}`} onClick={() => handleSlotClick('12:30')}
         >
-          <div className="time">12:30</div>
+          <div className="time">12:30 T6</div>
         </div>
         <div className={`timeSlot ${selectedSlot === '14:20' ? 'selected' : ''}`} onClick={() => handleSlotClick('14:20')}
         >
-          <div className="time">14:20</div>
+          <div className="time">14:20 T8</div>
         </div>
         <div className={`timeSlot ${selectedSlot === '15:00' ? 'selected' : ''}`} onClick={() => handleSlotClick('15:00')}
         >
-          <div className="time">15:00</div>
+          <div className="time">15:00 T10</div>
         </div>
         <div className={`timeSlot ${selectedSlot === '15:30' ? 'selected' : ''}`} onClick={() => handleSlotClick('15:30')}
         >
-          <div className="time">15:30</div>
+          <div className="time">15:30 T11</div>
         </div>
         {/* Add similar divs for other time slots */}
       </div>
