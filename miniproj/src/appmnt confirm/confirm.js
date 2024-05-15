@@ -14,10 +14,11 @@ const ConfirmationPage = () => {
 
       <h1 className="page-title">APPOINTMENT DETAILS</h1>
       <div className="appointment-details">
-      <p><span className="detail-label">Name of doctor:</span> Dr. Analise K</p>
+        <p><span className="detail-label">Name of doctor:</span> Dr. Analise K</p>
         <p><span className="detail-label">Department:</span> Gynecology</p>
         <p><span className="detail-label">Date:</span> 2024-05-16</p>
-        <p><span className="detail-label">Time slot:</span> 10:30 T3</p>
+        <p><span className="detail-label">Time slot:</span> 10:30 am T3</p>
+	<p><span className="detail-label">Patient Name:</span> Patient name</p>
       </div>
       <div className="confirmation-message">
         <div className="confirmation-box">
