@@ -18,7 +18,7 @@ import  Drdetails from './DrDetails/drdetails';
 import Condetails from './ConDetails/condetails';
 import  Avslots from './AvSlots/avslots';
 import Logind from './logindoctor/logindoctor'
-
+import AboutUs from './aboutus/aboutus';
 
 
 // Define the App component
@@ -39,7 +39,7 @@ function App() {
         <Route path="/appntbook" element={<Appntbook/>} />
         <Route path="/livetoken" element={<LiveTokenDisplay/>}/>
         <Route path="/view" element={<Viewdetails/>}/>
-       
+        <Route path="/aboutus" element={<AboutUs/>}/>
         <Route path="/doctor/:id" element={<Drdetails />} />
         <Route  path="/forgotpassword" element={<Forgotpassword/>} />
         <Route path="/drdetails" element={< Drdetails />} />
