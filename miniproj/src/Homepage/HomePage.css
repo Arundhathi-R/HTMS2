@@ -81,3 +81,18 @@
       margin-top: 0;
   
   }
+  .about_us {
+  
+    margin: 20px auto; 
+    text-align: right; 
+    max-width: 800px;
+  
+  }
+  
+  a {
+    text-decoration: underline;
+    color: gray;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    
+  }
