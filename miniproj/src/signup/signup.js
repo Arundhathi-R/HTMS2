@@ -3,7 +3,7 @@ import './signup.css';
 import { useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../config/firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -35,17 +35,19 @@ const Signup = () => {
         }
 
         try {
-            // register new patients
-            await createUserWithEmailAndPassword(auth, email, password);
-            const docRef1 = await addDoc(collection(db, "Patients"), {
+            // Register new patients
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const userId = userCredential.user.uid;
+
+            // Set patient document with user ID as the document ID
+            await setDoc(doc(db, 'Patients', userId), {
                 Address: address,
                 Age: age,
                 Gender: gender,
                 Name: name,
                 Phone: phone,
             });
-            console.log("Document written with ID: ", docRef1.id);
-            setShowSuccessModal(true);
+            navigate('/login');
         } catch (error) {
             console.error('Error signing up:', error.message);
             setErrorMessage('Error signing up: ' + error.message);
