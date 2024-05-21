@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/* import React, { useState, useEffect } from 'react';
 import './avslots.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -50,9 +50,59 @@ function Avslots() {
         >
           <div className="time">15:30 T11</div>
         </div>
-        {/* to add similar divs for other time slots - will later integrate with database*/}
-      </div>
+        {/* to add similar divs for other time slots - will later integrate with database*/
+      /* </div>
       <div className="bookNow" onClick={handlebooknowButtonClick}>Book Now</div>
+    </div>
+  );
+}
+
+export default Avslots; */
+
+import React, { useState, useEffect } from 'react';
+import './avslots.css';
+import { useNavigate, useLocation } from 'react-router-dom';
+
+function Avslots() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { date, doctor } = location.state || {};
+  const [selectedSlot, setSelectedSlot] = useState(null);
+
+  useEffect(() => {
+    if (!date || !doctor) {
+      navigate('/appntbook');
+    }
+  }, [date, doctor, navigate]);
+
+  const handleSlotClick = (slot) => {
+    setSelectedSlot(slot);
+  };
+
+  const handleBookNowButtonClick = () => {
+    navigate('/confirm', { state: { date, slot: selectedSlot, doctor } });
+  };
+
+  if (!date || !doctor) {
+    return null;
+  }
+
+  return (
+    <div className="container">
+      <button className="backButton" onClick={() => navigate(-1)}>Back</button>
+      <h1 className="title">Available Slots</h1>
+      <div className="timeSlotsWrapper">
+        {['10:00', '10:30', '12:30', '14:20', '15:00', '15:30'].map((slot) => (
+          <div
+            key={slot}
+            className={`timeSlot ${selectedSlot === slot ? 'selected' : ''}`}
+            onClick={() => handleSlotClick(slot)}
+          >
+            <div className="time">{slot}</div>
+          </div>
+        ))}
+      </div>
+      <button className="bookNow" onClick={handleBookNowButtonClick}>Book Now</button>
     </div>
   );
 }

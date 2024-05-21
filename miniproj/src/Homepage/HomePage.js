@@ -13,6 +13,9 @@ function BlankWhitePage() {
     const handleAdminButtonClick = () => {
         navigate('/logindoctor');
       };
+      const handleaboutusClick = () => {
+        navigate('/aboutus');
+      };
   return (
     <div>
       <div className="header">
@@ -28,6 +31,9 @@ function BlankWhitePage() {
         <div>
           <button className="patient-button"onClick={handlepatientButtonClick}>Patient</button>
         </div>
+        <div className="about_us">
+            <a href="/aboutus" onClick={handleaboutusClick}>About Us</a>
+          </div>
       </div>
     </div>
   );
