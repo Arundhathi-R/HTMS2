@@ -1,4 +1,4 @@
-/*import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './drdetails.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { db } from '../config/firebase';
@@ -47,7 +47,7 @@ function Drdetails() {
       <h2>DOCTOR DETAILS</h2>
       {/* div className="imageContainer">
         <img src={doctorDetails?.image} alt=" " className="doctorImage" />
-  </div>) }
+  </div>)*/ }
       <div className="detailRow">
         <span className="label">Name:</span>
         <span className="info">{doctorDetails?.Name}</span>
@@ -75,4 +75,4 @@ function Drdetails() {
   );
 }
 
-export default Drdetails;*/
+export default Drdetails;
