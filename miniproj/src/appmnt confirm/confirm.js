@@ -39,6 +39,10 @@ const ConfirmationPage = () => {
     }
   }, [date, slot, doctor, navigate]);
 
+  const generateTokenNo = () => {
+    return `T${Math.floor(Math.random() * 1000)}`;
+  };
+
   const handleConfirmButtonClick = async () => {
     try {
       const user = auth.currentUser;
@@ -46,20 +50,39 @@ const ConfirmationPage = () => {
       console.log('Doctor Details:', doctor);
       if (user && doctor && doctor.Username) {
         const appointmentId = `${user.uid}_${doctor.Username}_${date.toISOString()}_${slot}`;
-        await setDoc(doc(db, 'Appointments', appointmentId), {
+
+        // Data to be inserted into Appointments collection
+        const appointmentData = {
           AvlDate: date.toISOString(),
           AvlSlot: slot,
-          email:user.email,
+          email: user.email,
           DocUsername: doctor.Username,
           PatId: user.uid,
           PatName: userName
-        });
-        console.log('Appointment confirmed:', {
-          AvlDate: date.toISOString(),
-          AvlSlot: slot,
-          DocUsername: doctor.Username,
-          PatId: user.uid,
-        });
+        };
+
+        // Insert data into Appointments collection
+        await setDoc(doc(db, 'Appointments', appointmentId), appointmentData);
+        console.log('Appointment confirmed:', appointmentData);
+
+        // Generate a unique ID for the TokenUpdate document
+        const tokenUpdateId = `${user.uid}_${doctor.Username}_${date.toISOString()}_${slot}_token`;
+
+        // Data to be inserted into TokenUpdate collection
+        const tokenData = {
+          Appmnt: date.toISOString(),
+          DoctorName: doctor.Name,
+          PatientName: userName,
+          TokenNo: generateTokenNo(),
+          email: user.email,
+          status: 'notcompleted' // Set status to notcompleted
+        };
+        console.log('Token Data to be inserted:', tokenData);
+
+        // Insert data into TokenUpdate collection
+        await setDoc(doc(db, 'TokenUpdate', tokenUpdateId), tokenData);
+        console.log('TokenUpdate confirmed:', tokenData);
+
         navigate('/patient');
       } else {
         console.error('Invalid data: user or doctor details are missing');
