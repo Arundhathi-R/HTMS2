@@ -92,7 +92,7 @@ function Avslots() {
       <button className="backButton" onClick={() => navigate(-1)}>Back</button>
       <h1 className="title">Available Slots</h1>
       <div className="timeSlotsWrapper">
-        {['10:00', '10:30', '12:30', '14:20', '15:00', '15:30'].map((slot) => (
+        {['10:00 T1', '10:30 T2', '12:30 T3', '14:20 T4', '15:00 T5', '15:30 T6'].map((slot) => (
           <div
             key={slot}
             className={`timeSlot ${selectedSlot === slot ? 'selected' : ''}`}

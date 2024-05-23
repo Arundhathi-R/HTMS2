@@ -49,6 +49,7 @@ const ConfirmationPage = () => {
         await setDoc(doc(db, 'Appointments', appointmentId), {
           AvlDate: date.toISOString(),
           AvlSlot: slot,
+          email:user.email,
           DocUsername: doctor.Username,
           PatId: user.uid,
           PatName: userName
